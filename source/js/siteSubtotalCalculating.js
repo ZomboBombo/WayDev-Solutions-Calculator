@@ -21,7 +21,7 @@ window.siteSubtotalCalculating = (function () {
     designTemplate: calculatorForm.querySelector('.calculator-form__fieldset--design-template'),        // --- группа "Шаблон дизайна"
     setup: calculatorForm.querySelector('.calculator-form__fieldset--setup-and-filling'),               // --- группа "Работы по настройке и наполнению"
     hostingAndDomain: calculatorForm.querySelector('.calculator-form__fieldset--hosting-and-domain'),   // --- группа "Хостинг и домен"
-    integrations: calculatorForm.querySelector('.calculator-form__fieldset--integration'),              // --- группа "Интеграции"
+    integrations: calculatorForm.querySelector('.calculator-form__fieldset--integrations'),              // --- группа "Интеграции"
     additionalServices: calculatorForm.querySelector('.calculator-form__fieldset--additional-services') // --- группа "Дополнительные услуги"
   };
 
