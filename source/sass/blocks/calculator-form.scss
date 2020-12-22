@@ -1,4 +1,6 @@
 .calculator-form__fieldset {
+  margin-bottom: 40px;
+
   border: none;
   border-bottom: 1px solid #4f4f4f;
 
@@ -9,6 +11,8 @@
 }
 
 .calculator-form__fieldset-name {
+  margin-bottom: 40px;
+
   font-size: 25px;
   font-weight: 700;
   line-height: 25px;
@@ -16,11 +20,29 @@
 
 .calculator-form__fields {
   @include markerless;
+  margin-bottom: 40px;
 }
 
-.calculator-form__subtotal{
+.calculator-form__subtotal {
+  margin-bottom: 40px;
+
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
   color: $waydev-green;
+}
+
+
+
+/*
+================================
+--------- МЕДИАЗАПРОСЫ ---------
+================================
+*/
+
+// *** ширина вьюпорта: "Десктоп" ***
+@media (min-width: $width--desktop) {
+  .calculator-form__fieldset {
+    display: flex;
+  }
 }

@@ -1,6 +1,7 @@
 .calculator-fields-list {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .calculator-fields-list__item {
@@ -25,6 +26,8 @@
   font-weight: 400;
   line-height: 15px;
 
+  opacity: 0.5;
+
 
   &::before,
   &::after {
@@ -46,7 +49,18 @@
   }
 }
 
+.calculator-fields-list__item-name:hover {
+  opacity: 1;
+}
+
 .calculator-fields-list__item-input:checked + .calculator-fields-list__item-name {
+  opacity: 1;
+
+
+  &::before {
+    border-color: $waydev-green;
+  }
+
   &::after {
     display: block;
   }
@@ -63,8 +77,8 @@
   justify-content: center;
   align-items: center;
 
-  width: 100%;
-  max-width: 200px;
+  width: auto;
+  min-width: 200px;
   min-height: 70px;
 
   border: 1px solid $white;
@@ -119,5 +133,43 @@
 
     background-color: transparent;
     border: none;
+  }
+}
+
+
+
+/*
+================================
+--------- МЕДИАЗАПРОСЫ ---------
+================================
+*/
+
+// *** ширина вьюпорта: "Десктоп" ***
+@media (min-width: $width--desktop) {
+  .calculator-fields-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .calculator-fields-list__item {
+    margin-left: 40px;
+  }
+
+  .calculator-fields-list__item--site-type {
+    margin-left: 20px;
+
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .calculator-fields-list__item-name {
+    display: flex;
+    width: 300px;
+
+    &--site-type-label {
+      width: auto;
+    } 
   }
 }
