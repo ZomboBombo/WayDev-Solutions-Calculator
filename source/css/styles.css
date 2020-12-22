@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+}
+
+
+/* --- Класс для доступного сокрытия элементов --- */
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  margin: -1px;
+  padding: 0;
+
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+/* --- конец .visually-hidden --- */
+
+
+.calculator-form__subtotal {
+  outline: 2px dashed red;
+  outline-offset: 4px;
+}

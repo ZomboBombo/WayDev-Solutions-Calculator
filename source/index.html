@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>WayDev Solutions: Site Cost Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+    <main>
+      <section class="site-cost-calculator">
+        <div>
+          <h2 class="site-cost-calculator__heading">Калькулятор стоимости разработки сайта</h2>
+          <p class="site-cost-calculator__additional-info">Итоговая сумма является приблизительной. Для более точного расчета стоимости свяжитесь с нами.</p>
+        </div>
+
+        <form action="" method="GET" class="site-cost-calculator__form calculator-form">
+          <!--
+            ========= Группа: "Тип сайта" =========
+          -->
+          <fieldset class="calculator-form__fieldset calculator-form__fieldset--site-type" id="siteTypeFieldset">
+            <legend class="calculator-form__fieldset-name">Тип сайта</legend>
+
+            <ul class="calculator-form__fields calculator-form__fields--site-types calculator-fields-list">
+              <li class="calculator-fields-list__item">
+                <input type="radio" name="site-type-radio" id="typeOnlineStore" class="" value="35900" checked>
+                <label for="typeOnlineStore" title="Лицензия 1С-Битрикс: Малый бизнес">Интернет-магазин</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="radio" name="site-type-radio" id="typeCorpSite" class="" value="5400">
+                <label for="typeCorpSite" title="Лицензия 1С-Битрикс: Старт">Корпоративный сайт</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="radio" name="site-type-radio" id="typeBusinessCard" class="" value="5400">
+                <label for="typeBusinessCard" title="Лицензия 1С-Битрикс: Старт">Сайт-визитка</label>
+              </li>
+            </ul>
+
+            <div class="calculator-form__subtotal">
+              <span class="calculator-form__subtotal-cost" id="subtotalSiteType">0</span>
+              <span class="calculator-form__subtotal-currency">&#8381;</span>
+            </div>
+          </fieldset>
+
+          <!--
+            ========= Группа: "Шаблон дизайна" =========
+          -->
+          <fieldset class="calculator-form__fieldset calculator-form__fieldset--design-template">
+            <legend class="calculator-form__fieldset-name">Шаблон дизайна</legend>
+
+            <!-- ********* Шаблоны для Онлайн-магазина ********* -->
+            <ul class="calculator-form__fields calculator-form__fields--online-store design-template-list calculator-fields-list">
+              <li class="calculator-fields-list__item">
+                <input type="radio" name="online-store-design-template-radio" id="onlineStoreAsproMax" value="39900" checked>
+                <label for="onlineStoreAsproMax">Аспро: Максимум</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="radio" name="online-store-design-template-radio" id="onlineStoreAsproOptimus" value="24900">
+                <label for="onlineStoreAsproOptimus">Аспро: Оптимус</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="radio" name="online-store-design-template-radio" id="onlineStoreAsproNext" value="29900">
+                <label for="onlineStoreAsproNext">Аспро: Некст</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="radio" name="online-store-design-template-radio" id="onlineStoreAsproMarket" value="19900">
+                <label for="onlineStoreAsproMarket">Аспро: Маркет</label>
+              </li>
+            </ul>
+
+            <!-- ********* Шаблоны для Корпоративного сайта ********* -->
+            <ul class="calculator-form__fields calculator-form__fields--corporate-site design-template-list calculator-fields-list">
+              <li class="calculator-fields-list__item">
+                <input type="radio" name="corporate-site-design-template-radio" id="corporateSiteResort" value="15900" checked>
+                <label for="corporateSiteResort">Сайт базы отдыха «Курорт»</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="radio" name="corporate-site-design-template-radio" id="corporateSiteAsproPriority" value="24900">
+                <label for="corporateSiteAsproPriority">Аспро: Приорити</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="radio" name="corporate-site-design-template-radio" id="corporateSiteNextypePrime" value="39900">
+                <label for="corporateSiteNextypePrime">Некстайп: Прайм</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="radio" name="corporate-site-design-template-radio" id="corporateSiteMedicalCenter" value="19900">
+                <label for="corporateSiteMedicalCenter">Сайт базы отдыха «Мед центр»</label>
+              </li>
+            </ul>
+
+            <!-- ********* Шаблоны для Сайта-визитки ********* -->
+            <ul class="calculator-form__fields calculator-form__fields--business-card design-template-list calculator-fields-list">
+              <li class="calculator-fields-list__item">
+                <input type="radio" name="business-card-design-template-radio" id="businessСardAspro" value="13900" checked>
+                <label for="businessСardAspro">Сайт современной компании «Аспро»</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="radio" name="business-card-design-template-radio" id="businessСardStroika" value="15900">
+                <label for="businessСardStroika">Сайт современной компании «Стройка»</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="radio" name="business-card-design-template-radio" id="businessСardIncorp" value="5900">
+                <label for="businessСardIncorp">Сайт современной компании «Incorp»</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="radio" name="business-card-design-template-radio" id="businessСardCitrus" value="19900">
+                <label for="businessСardCitrus">Сайт современной компании «Цитрус»</label>
+              </li>
+            </ul>
+
+            <div class="calculator-form__subtotal">
+              <span class="calculator-form__subtotal-cost" id="subtotalDesignTemplate">0</span>
+              <span class="calculator-form__subtotal-currency">&#8381;</span>
+            </div>
+          </fieldset>
+
+
+          <!--
+            ========= Группа: "Работы по настройке и наполнению" =========
+          -->
+          <fieldset class="calculator-form__fieldset calculator-form__fieldset--setup-and-filling">
+            <legend class="calculator-form__fieldset-name">Работы по настройке и наполнению</legend>
+
+            <ul class="calculator-form__fields calculator-fields-list">
+              <li class="calculator-fields-list__item">
+                <input type="checkbox" name="setup-and-filling-checkbox"  id="setupForHosting" value="3000" checked>
+                <label for="setupForHosting">Установка и настройка (Установка шаблона на хостинг и настройка основных функций)</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="checkbox" name="setup-and-filling-checkbox" id="setupForDesigns" value="3000" checked>
+                <label for="setupForDesigns">Базовая настройка дизайна (Размещение логотипа и настройка цветовой гаммы сайта)</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="checkbox" name="setup-and-filling-checkbox" id="setupForMenu" value="2000" checked>
+                <label for="setupForMenu">Настройка меню (Настройка пунктов меню сайта)</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="checkbox" name="setup-and-filling-checkbox" id="setupForSiteFilling" value="2000" checked>
+                <label for="setupForSiteFilling">Базовое наполнение сайта (Наполнение страниц "О компании" и "Контакты")</label>
+              </li>
+            </ul>
+
+            <div class="calculator-form__subtotal">
+              <span class="calculator-form__subtotal-cost" id="subtotalSetup">0</span>
+              <span class="calculator-form__subtotal-currency">&#8381;</span>
+            </div>
+          </fieldset>
+
+
+          <!--
+            ========= Группа: "Хостинг и домен" =========
+          -->
+          <fieldset class="calculator-form__fieldset calculator-form__fieldset--hosting-and-domain">
+            <legend class="calculator-form__fieldset-name">Хостинг и домен</legend>
+
+            <ul class="calculator-form__fields calculator-fields-list">
+              <li class="calculator-fields-list__item">
+                <input type="checkbox" name="hosting-and-domain-checkbox" id="hostingInput" value="12000">
+                <label for="hostingInput">Хостинг Beget.com на 1 год (Лидер хостингов в России)</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="checkbox" name="hosting-and-domain-checkbox" id="domainInput" value="1500">
+                <label for="domainInput">Регистрация домена (Регистрация доменного имени в зоне .RU, .РФ + SSL-сертификат)</label>
+              </li>
+            </ul>
+
+            <div class="calculator-form__subtotal">
+              <span class="calculator-form__subtotal-cost" id="subtotalHosting">0</span>
+              <span class="calculator-form__subtotal-currency">&#8381;</span>
+            </div>
+          </fieldset>
+
+
+          <!--
+            ========= Группа: "Интеграции" =========
+          -->
+          <fieldset class="calculator-form__fieldset calculator-form__fieldset--integration" id="integrationsFieldset">
+            <legend class="calculator-form__fieldset-name">Интеграции</legend>
+
+            <ul class="calculator-form__fields calculator-fields-list">
+              <li class="calculator-fields-list__item">
+                <input type="checkbox" name="integrations-checkbox" id="integration1С" value="20000">
+                <label for="integration1С">Интеграция сайта с 1С (Стандартная интеграция сайта с 1С:УТ)</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="checkbox" name="integrations-checkbox" id="integrationOnlinePayment" value="7000">
+                <label for="integrationOnlinePayment">Подключение онлайн-оплаты (Подключение модулей Сбербанка или Яндекс.Кассы)</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="checkbox" name="integrations-checkbox" id="integrationOnlineChecks" value="5000">
+                <label for="integrationOnlineChecks">Отправка онлайн-чеков (В соответствии с требованиями ФЗ-54)</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="checkbox" name="integrations-checkbox" id="integrationDelivery" value="5000">
+                <label for="integrationDelivery">Интеграция онлайн-доставки (Интеграция с курьерской службой или Почтой России)</label>
+              </li>
+            </ul>
+
+            <div class="calculator-form__subtotal">
+              <span class="calculator-form__subtotal-cost" id="subtotalIntegrations">0</span>
+              <span class="calculator-form__subtotal-currency">&#8381;</span>
+            </div>
+          </fieldset>
+
+
+          <!--
+            ========= Группа: "Дополнительные услуги" =========
+          -->
+          <fieldset class="calculator-form__fieldset calculator-form__fieldset--additional-services">
+            <legend class="calculator-form__fieldset-name">Дополнительные услуги</legend>
+
+            <ul class="calculator-form__fields calculator-fields-list">
+              <li class="calculator-fields-list__item">
+                <input type="checkbox" name="additional-services-checkbox" id="additionalServiceLayoutDev" value="2500" checked>
+                <label for="additionalServiceLayoutDev">Разработка дизайн-макета баннера (Для размещения на первом экране)</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="checkbox" name="additional-services-checkbox" id="additionalServiceYandexMetrika" value="1500" checked>
+                <label for="additionalServiceYandexMetrika">Подключение статистики Яндекс.Метрика (Установка счётчиков и настройка целей)</label>
+              </li>
+              <li class="calculator-fields-list__item">
+                <input type="checkbox" name="additional-services-checkbox" id="additionalServiceOnlineConsultant" value="1500" checked>
+                <label for="additionalServiceOnlineConsultant">Подключение онлайн-консультанта (Установка виджета Jivo-site или Envybox)</label>
+              </li>
+            </ul>
+
+            <div class="calculator-form__subtotal">
+              <span class="calculator-form__subtotal-cost" id="subtotalAdditionalServices">0</span>
+              <span class="calculator-form__subtotal-currency">&#8381;</span>
+            </div>
+          </fieldset>
+        </form>
+
+        <div class="site-cost-calculator__total">
+          <span class="site-cost-calculator__total-title">Итоговая стоимость:</span>
+          <p class="site-cost-calculator__total-cost">
+            <span class="site-cost-calculator__total-cost-number" id="totalSiteCost">0</span>
+            <span class="site-cost-calculator__total-cost-currency">&#8381;</span>
+          </p>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Скрипты -->
+    <script src="js/siteTotalCost.js"></script>
+    <script src="js/siteSubtotalCalculating.js"></script>
+    <script src="js/siteTypeChange.js"></script>
+  </body>
+</html>
