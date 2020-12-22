@@ -8,7 +8,7 @@
 window.siteTypeChange = (function () {
   // ============================= КОНСТАНТЫ ============================
   const DISPLAY_NONE = 'display: none';
-  const DISPLAY_BLOCK = 'display: block';
+  const DISPLAY_BLOCK = 'display: flex';
   const ID_ONLINE_STORE = 'typeOnlineStore';
   const ZERO = 0;
   const PLUS_SIGN = '+ ';
