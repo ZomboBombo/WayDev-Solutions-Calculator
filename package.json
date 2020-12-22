@@ -1,0 +1,39 @@
+{
+  "name": "waydev-solutions-calculator",
+  "version": "1.0.0",
+  "description": "Application for calculating the cost of a website for a client.",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "browser-sync": "^2.26.12",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-posthtml": "^3.0.5",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-terser": "^1.4.0",
+    "gulp-webp": "^4.0.1",
+    "posthtml-include": "^1.4.3",
+    "readable-stream": "^3.6.0"
+  },
+  "scripts": {
+    "start": "gulp start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZomboBombo/WayDev-Solutions-Calculator.git"
+  },
+  "author": "Sergey Novikov (ZBom)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZomboBombo/WayDev-Solutions-Calculator/issues"
+  },
+  "homepage": "https://github.com/ZomboBombo/WayDev-Solutions-Calculator#readme"
+}
