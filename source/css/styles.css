@@ -240,16 +240,158 @@ footer {
   overflow: hidden; }
 
 .site-cost-calculator {
-  background-color: #1b1513;
-  color: #ffffff; }
+  color: #ffffff;
+  background-color: #1b1513; }
+
+.site-cost-calculator__inner-container {
+  padding-right: 20px;
+  padding-left: 20px; }
 
 .site-cost-calculator__heading {
-  margin-top: 0; }
+  position: relative;
+  margin-top: 0;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 25px; }
+  .site-cost-calculator__heading::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 40px;
+    height: 50px;
+    background-color: #1b1513;
+    background-image: url("../icon-calculator.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0; }
 
 .site-cost-calculator__total {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 350px;
+  padding-right: 20px;
+  padding-left: 20px;
   background-color: #297f00; }
+
+.site-cost-calculator__total-title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 25px; }
+
+.site-cost-calculator__total-cost-number,
+.site-cost-calculator__total-cost-currency {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 45px; }
+
+.site-cost-calculator__request-button {
+  width: 100%;
+  min-height: 80px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff; }
+
+.calculator-form__fieldset {
+  border: none;
+  border-bottom: 1px solid #4f4f4f; }
+  .calculator-form__fieldset:last-child {
+    border-bottom: none; }
+
+.calculator-form__fieldset-name {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 25px; }
 
 .calculator-form__fields {
   margin: 0;
   padding: 0;
   list-style-type: none; }
+
+.calculator-form__subtotal {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #297f00; }
+
+.calculator-fields-list {
+  display: flex;
+  flex-direction: column; }
+
+.calculator-fields-list__item {
+  margin-bottom: 20px;
+  margin-left: 40px; }
+  .calculator-fields-list__item:last-child {
+    margin-bottom: 0; }
+  .calculator-fields-list__item--site-type {
+    margin-left: 0; }
+
+.calculator-fields-list__item-name {
+  position: relative;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 15px; }
+  .calculator-fields-list__item-name::before, .calculator-fields-list__item-name::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+    display: block;
+    width: 24px;
+    height: 24px; }
+  .calculator-fields-list__item-name::after {
+    display: none; }
+
+.calculator-fields-list__item-input:checked + .calculator-fields-list__item-name::after {
+  display: block; }
+
+.calculator-fields-list__item-input--site-type:checked + .calculator-fields-list__item-name--site-type-label {
+  background-color: #297f00;
+  border-color: #297f00; }
+
+.calculator-fields-list__item-name--site-type-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 200px;
+  min-height: 70px;
+  border: 1px solid #ffffff; }
+  .calculator-fields-list__item-name--site-type-label:hover {
+    cursor: pointer; }
+  .calculator-fields-list__item-name--site-type-label::before, .calculator-fields-list__item-name--site-type-label::after {
+    display: none; }
+
+.calculator-fields-list__item-name--radiobutton::before, .calculator-fields-list__item-name--radiobutton::after,
+.calculator-fields-list__item-name--checkbox::before,
+.calculator-fields-list__item-name--checkbox::after {
+  border-radius: 50%; }
+
+.calculator-fields-list__item-name--radiobutton::before,
+.calculator-fields-list__item-name--checkbox::before {
+  border: 1px solid #ffffff; }
+
+.calculator-fields-list__item-name--radiobutton::after,
+.calculator-fields-list__item-name--checkbox::after {
+  left: -34px;
+  width: 12px;
+  height: 12px;
+  background-color: #297f00;
+  border: 1px solid #297f00; }
+
+.calculator-fields-list__item-name--checkbox::before, .calculator-fields-list__item-name--checkbox::after {
+  top: 0;
+  transform: translateY(0);
+  border-radius: 0; }
+
+.calculator-fields-list__item-name--checkbox::after {
+  content: url("../icon-check.svg");
+  top: 0;
+  background-color: transparent;
+  border: none; }

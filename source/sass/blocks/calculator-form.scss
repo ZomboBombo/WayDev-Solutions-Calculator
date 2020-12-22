@@ -1,3 +1,26 @@
+.calculator-form__fieldset {
+  border: none;
+  border-bottom: 1px solid #4f4f4f;
+
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.calculator-form__fieldset-name {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 25px;
+}
+
 .calculator-form__fields {
   @include markerless;
+}
+
+.calculator-form__subtotal{
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $waydev-green;
 }
