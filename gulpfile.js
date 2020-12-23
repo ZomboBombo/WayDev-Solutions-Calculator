@@ -35,18 +35,18 @@ var server = require("browser-sync").create();
 // *** Обработка SCSS и CSS ***
 gulp.task("css", () => {
   return pipeline(
-    gulp.src("source/sass/styles.scss"),
+    gulp.src("docs/sass/styles.scss"),
     plumber(),
     sourcemap.init(),
     sass(),
     postcss([
       autoprefixer()
     ]),
-    gulp.dest("source/css"),
+    gulp.dest("docs/css"),
     csso(),
     rename("styles.min.css"),
     sourcemap.write("."),
-    gulp.dest("source/css"),
+    gulp.dest("docs/css"),
     server.stream()
   );
 });
@@ -70,15 +70,15 @@ gulp.task("html", () => {
 // *** Работа с сервером ***
 gulp.task("server", () => {
   server.init({
-    server: "source",
+    server: "docs",
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 
-  gulp.watch("source/sass/**/*.{sass,scss}", gulp.series("css"));
-  gulp.watch("source/*.html", gulp.series("refresh"));
+  gulp.watch("docs/sass/**/*.{sass,scss}", gulp.series("css"));
+  gulp.watch("docs/*.html", gulp.series("refresh"));
 });
 
 gulp.task("refresh", (done) => {
