@@ -45,21 +45,34 @@
 .site-cost-calculator__total {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-around;
 
   width: 100%;
-  min-height: 350px;
+  min-height: 100px;
 
+  padding-top: 40px;
   padding-right: 20px;
+  padding-bottom: 40px;
   padding-left: 20px;
 
   background-color: $waydev-green;
 }
 
 .site-cost-calculator__total-title {
+  display: flex;
+  align-items: center;
+
   font-size: 25px;
   font-weight: 700;
   line-height: 25px; 
+}
+
+.site-cost-calculator__total-cost {
+  display: flex;
+  align-items: center;
+
+  margin: 30px 0;
 }
 
 .site-cost-calculator__total-cost-number,
@@ -103,7 +116,7 @@
 */
 
 // *** ширина вьюпорта: "Десктоп" ***
-@media (min-width: $width--desktop) {
+@media (min-width: $width--tablet) {
   .site-cost-calculator__heading-wrapper {
     &::after {
       right: auto;
@@ -124,5 +137,13 @@
 
   .site-cost-calculator__form {
     margin-top: 60px;
+  }
+
+  .site-cost-calculator__total {
+    flex-direction: row;
+  }
+
+  .site-cost-calculator__request-button {
+    width: 300px;
   }
 }

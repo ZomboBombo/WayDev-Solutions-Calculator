@@ -1,4 +1,9 @@
 .calculator-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
   margin-bottom: 40px;
 
   border: none;
@@ -24,6 +29,8 @@
 }
 
 .calculator-form__subtotal {
+  width: 300px;
+
   margin-bottom: 40px;
 
   font-size: 30px;
@@ -41,8 +48,8 @@
 */
 
 // *** ширина вьюпорта: "Десктоп" ***
-@media (min-width: $width--desktop) {
+@media (min-width: $width--tablet) {
   .calculator-form__fieldset {
-    display: flex;
+    flex-direction: row;
   }
 }
