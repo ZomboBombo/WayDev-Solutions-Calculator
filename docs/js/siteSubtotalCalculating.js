@@ -7,6 +7,7 @@
 */
 window.siteSubtotalCalculating = (function () {
   // ============================ КОНСТАНТЫ =============================
+  const DISPLAY_PROPERTY_BLOCK = 'flex';
   const PLUS_SIGN = '+ ';
   const NUMBER_SYSTEM_BASE = 10;
 
@@ -100,7 +101,7 @@ window.siteSubtotalCalculating = (function () {
   // *** Функция для вычисления промежуточной стоимости группы "Шаблон дизайна" ***
   const activateDesignTemplate = function () {
     for (let i = 0; i < designTemplateLists.length; i++) {
-      if (designTemplateLists[i].style.display === 'block') {
+      if (designTemplateLists[i].style.display === DISPLAY_PROPERTY_BLOCK) {
         const designTemplateElements = designTemplateLists[i].querySelectorAll('input[type="radio"]');
 
         // --- Заполение поля числом, соответствующим значению отмеченного шаблона ---
